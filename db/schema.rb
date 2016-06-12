@@ -35,8 +35,10 @@ ActiveRecord::Schema.define(:version => 20160612151201) do
   create_table "receipts", :force => true do |t|
     t.integer  "customer_id"
     t.integer  "order_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   add_index "receipts", ["customer_id"], :name => "index_receipts_on_customer_id"
