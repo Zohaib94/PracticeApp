@@ -1,5 +1,4 @@
 class Order < ActiveRecord::Base
-  has_many :receipts
-  has_many :customers , :through => :receipts
+  has_and_belongs_to_many :customers
   attr_accessible :ordername , :customer_id
 end
