@@ -1,4 +1,4 @@
 class Customer < ActiveRecord::Base
-  has_many :orders
+  has_one :order
   attr_accessible :name
 end
