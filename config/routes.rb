@@ -1,4 +1,7 @@
 PracticeApp::Application.routes.draw do
+  resources :receipts
+
+
   resources :orders
 
 
